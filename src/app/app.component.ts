@@ -11,12 +11,12 @@ export class AppComponent  {
 
   mockData={
     title: 'חסימת הרשאה',
-    message: 'פעולתך לא נשמרה עקב בעייה במאגר',
+    message: 'אינך מורשה לבצע כניסה למערכת',
     image: '',
     option1: 'פנה לתמיכה',
     option2: 'הבנתי'
   }
-  
+
   openDialog() {
       const dialogConfig = new MatDialogConfig();
       dialogConfig.disableClose=true;
@@ -25,3 +25,4 @@ export class AppComponent  {
       this.dialog.open(AlertBodyComponent, dialogConfig);
  }
 }
+
