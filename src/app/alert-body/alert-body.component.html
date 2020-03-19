@@ -1,15 +1,14 @@
-
 <mat-dialog-content>
     <div class="alert">
         <div class="alert-body">
-<!-- TODO- change the next line's icon to the propriet icon of the alert via binding 'image' property  -->
+<!-- TODO- change the next line's icon to the propriet icon of the alert via binding the src to data.image  -->
             <div class="alert-body-image"><i class="fa fa-thumbs-down" style="font-size:48px;color:red"></i> </div>
-            <div class="alert-body-title">{{title}}</div>
-            <div class="alert-body-message">{{message}}</div>
+            <div class="alert-body-title">{{data.title}}</div>
+            <div class="alert-body-message">{{data.message}}</div>
         </div>
         <div class="alert-footer">
-             <div class="alert-footer-bright" (click)="close(option1)">{{option1}}</div>
-            <div class="alert-footer-dark" (click)="close(option2)">{{option2}}</div>
+             <div class="alert-footer-bright" (click)="onClick(data.option1)">{{data.option1}}</div>
+            <div class="alert-footer-dark" (click)="onClick(data.option2)">{{data.option2}}</div>
         </div>
     </div>
 </mat-dialog-content>  
