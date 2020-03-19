@@ -1,4 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -8,17 +9,12 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class AlertBodyComponent implements OnInit {
 
-  title='חסימת הרשאה';
-  message='פעולתך לא נשמרה עקב בעייה במאגר';
-  image;
-  option1='פנה לתמיכה';
-  option2='הבנתי';
-  constructor( private dialogRef: MatDialogRef<AlertBodyComponent>) { }
+  constructor( private dialogRef: MatDialogRef<AlertBodyComponent>, @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
   }
 
-  close(option) {
+  onClick(option) {
 
     this.dialogRef.close();
 
