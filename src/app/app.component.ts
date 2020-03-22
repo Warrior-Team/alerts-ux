@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { AlertBodyComponent } from './alert-body/alert-body.component';
 @Component({
@@ -18,10 +19,12 @@ export class AppComponent  {
   }
 
   openDialog() {
-      const dialogConfig = new MatDialogConfig();
-      dialogConfig.disableClose=true;
-      dialogConfig.panelClass='dialog';
-      dialogConfig.data=this.mockData;
+      let dialogConfig = new MatDialogConfig();
+      dialogConfig={
+        disableClose: true,
+        panelClass: 'dialog',
+        data: this.mockData
+      }
       this.dialog.open(AlertBodyComponent, dialogConfig);
  }
 }
