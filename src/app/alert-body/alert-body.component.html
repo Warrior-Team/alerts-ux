@@ -7,9 +7,13 @@
             <div class="alert-body-message">{{data.message}}</div>
         </div>
         <div class="alert-footer">
-             <div class="alert-footer-bright" (click)="onClick(data.option1)">{{data.option1}}</div>
-            <div class="alert-footer-dark" (click)="onClick(data.option2)">{{data.option2}}</div>
+            <div class="alert-footer-bright" (click)="onClick(data.option1)">
+                 <div class="alert-footer-bright-text">{{data.option1}}</div>
+            </div>
+            <div class="alert-footer-dark" (click)="onClick(data.option2)">
+                <div class="alert-footer-dark-text">{{data.option2}}</div>
+            </div>
         </div>
     </div>
-</mat-dialog-content>  
+</mat-dialog-content>   
 
